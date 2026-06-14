@@ -1,0 +1,20 @@
+# 同样为 x86_64 平台进行设置
+[target.aarch64-unknown-linux-ohos]
+ar = "C:/Program Files/Huawei/DevEco Studio/sdk/default/openharmony/native/llvm/bin/llvm-ar"
+linker = "C:/Users/Kai/.ohos/script/aarch64-unknown-linux-ohos-clang.cmd"
+
+[target.x86_64-unknown-linux-ohos]
+ar = "C:/Program Files/Huawei/DevEco Studio/sdk/default/openharmony/native/llvm/bin/llvm-ar"
+linker = "C:/Users/Kai/.ohos/script/x86_64-unknown-linux-ohos-clang.cmd"
+
+[env]
+# 告诉 cc-rs 在为 aarch64-ohos 编译 C 代码时使用你的脚本
+AR_aarch64_unknown_linux_ohos = "C:/Program Files/Huawei/DevEco Studio/sdk/default/openharmony/native/llvm/bin/llvm-ar"
+# 最好也为 C++ 设置一个，以防有 crate 需要编译 C++
+CC_aarch64_unknown_linux_ohos = "C:/Users/Kai/.ohos/script/aarch64-unknown-linux-ohos-clang.cmd"
+CXX_aarch64_unknown_linux_ohos = "C:/Users/Kai/.ohos/script/aarch64-unknown-linux-ohos-clang++.cmd"
+
+# 同样为 x86_64 平台进行设置
+CC_x86_64_unknown_linux_ohos = "C:/Users/Kai/.ohos/script/x86_64-unknown-linux-ohos-clang.cmd"
+AR_x86_64_unknown_linux_ohos = "C:/Program Files/Huawei/DevEco Studio/sdk/default/openharmony/native/llvm/bin/llvm-ar"
+CXX_x86_64_unknown_linux_ohos = "C:/Users/Kai/.ohos/script/x86_64-unknown-linux-ohos-clang++.cmd"

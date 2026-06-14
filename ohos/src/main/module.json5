@@ -1,0 +1,7 @@
+{
+  module: {
+    name: "rust_ohos_app",
+    type: "har",
+    deviceTypes: ["default", "tablet"],
+  },
+}
